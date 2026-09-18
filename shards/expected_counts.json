@@ -1,0 +1,58 @@
+[
+  {
+    "shard": 0,
+    "rows": 1000000,
+    "bad_email": 131,
+    "missing_field": 64,
+    "invalid": 195
+  },
+  {
+    "shard": 1,
+    "rows": 1000000,
+    "bad_email": 54,
+    "missing_field": 86,
+    "invalid": 140
+  },
+  {
+    "shard": 2,
+    "rows": 1000000,
+    "bad_email": 102,
+    "missing_field": 116,
+    "invalid": 218
+  },
+  {
+    "shard": 3,
+    "rows": 1000000,
+    "bad_email": 84,
+    "missing_field": 103,
+    "invalid": 187
+  },
+  {
+    "shard": 4,
+    "rows": 1000000,
+    "bad_email": 59,
+    "missing_field": 101,
+    "invalid": 160
+  },
+  {
+    "shard": 5,
+    "rows": 1000000,
+    "bad_email": 95,
+    "missing_field": 58,
+    "invalid": 153
+  },
+  {
+    "shard": 6,
+    "rows": 1000000,
+    "bad_email": 120,
+    "missing_field": 90,
+    "invalid": 210
+  },
+  {
+    "shard": 7,
+    "rows": 1000000,
+    "bad_email": 58,
+    "missing_field": 94,
+    "invalid": 152
+  }
+]
