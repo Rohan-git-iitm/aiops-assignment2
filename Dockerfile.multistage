@@ -1,0 +1,26 @@
+# Stage 1: install dependencies
+FROM python:3.11 AS builder
+
+WORKDIR /app
+
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+COPY requirements-predictor.txt .
+RUN pip install --no-cache-dir -U pip
+RUN pip install --no-cache-dir -r requirements-predictor.txt
+
+# Stage 2: runtime
+FROM python:3.11-slim AS runner
+
+WORKDIR /app
+
+COPY --from=builder /opt/venv /opt/venv
+COPY spam_app.py .
+COPY data/model.joblib ./model.joblib
+ENV MODEL_PATH=/app/model.joblib
+
+ENV PATH="/opt/venv/bin:$PATH"
+
+EXPOSE 8080
+CMD ["uvicorn", "spam_app:app", "--host", "0.0.0.0", "--port", "8080"]
