@@ -3,4 +3,3 @@ uvicorn[standard]
 scikit-learn
 joblib
 pydantic
-redis
